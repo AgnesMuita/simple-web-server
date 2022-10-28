@@ -1,8 +1,21 @@
 const port = 3000;
 const http = require('http');
+const cors = require("cors");
+
  
 const requestListener = (req, res)=>{
   console.log("Request is Incoming");
+  const headers = {
+    'Access-Control-Allow-Origin': '*', 
+    'Access-Control-Allow-Methods': 'OPTIONS, GET',
+    'Access-Control-Max-Age': 2592000, 
+  };
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204, headers);
+    res.end();
+    return;
+  }
      
   const responseData = {
         slackUsername:"wamwithamuita",
