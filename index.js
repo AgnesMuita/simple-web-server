@@ -8,7 +8,6 @@ const requestListener = (req, res)=>{
   const headers = {
     'Access-Control-Allow-Origin': '*', 
     'Access-Control-Allow-Methods': 'OPTIONS, GET',
-    'Access-Control-Max-Age': 2592000, 
   };
 
   if (req.method === 'OPTIONS') {
