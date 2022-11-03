@@ -1,4 +1,4 @@
-node_modules
-package-lock.json
-package.json
-vercel.json
+/node_modules
+/package-lock.json
+/package.json
+/vercel.json
